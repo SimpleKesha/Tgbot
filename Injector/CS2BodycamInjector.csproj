@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>CS2BodycamInjector</AssemblyName>
+    <RootNamespace>CS2BodycamInjector</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>x64</Platforms>
+    <!-- Публикация в один .exe файл -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--
+      Помещаем скомпилированный bodycam_mod.dll в папку Resources/
+      и вшиваем его прямо в .exe как ресурс.
+      Файл появится после того как соберёшь C++ проект (Mod/).
+    -->
+    <EmbeddedResource Include="Resources\bodycam_mod.dll"
+                      Condition="Exists('Resources\bodycam_mod.dll')" />
+  </ItemGroup>
+
+</Project>

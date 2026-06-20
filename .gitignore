@@ -1,0 +1,21 @@
+# Игнорируем артефакты сборки C++
+Mod/build/
+Mod/thirdparty/minhook/
+
+# Артефакты .NET
+Injector/bin/
+Injector/obj/
+
+# Скомпилированная DLL (появляется после сборки)
+# НЕ игнорируем — она вшивается в .exe инжектора
+# Injector/Resources/bodycam_mod.dll
+
+# IDE
+.vs/
+*.user
+*.suo
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store

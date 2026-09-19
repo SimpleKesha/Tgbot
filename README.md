@@ -2,23 +2,23 @@
 
 ```
 CS2BodycamMod/
-├── Mod/                         ← C++ DLL-мод (собирается ПЕРВЫМ)
+├── Mod/                         
 │   ├── CMakeLists.txt
 │   ├── src/
-│   │   ├── dllmain.cpp          ← точка входа DLL, запуск ModThread
-│   │   ├── HookManager.h / .cpp ← MinHook обёртка, все хуки
-│   │   └── SigScanner.h / .cpp  ← поиск функций по IDA-паттернам
+│   │   ├── dllmain.cpp          
+│   │   ├── HookManager.h / .cpp 
+│   │   └── SigScanner.h / .cpp  
 │   └── thirdparty/
-│       └── README.txt           ← инструкция по скачиванию MinHook
+│       └── README.txt           
 │
-└── Injector/                    ← C# WinForms инжектор (собирается ВТОРЫМ)
+└── Injector/                    
     ├── CS2BodycamInjector.csproj
     ├── Program.cs
     ├── MainForm.cs
     ├── MainForm.Designer.cs
     ├── DllInjector.cs
     └── Resources/
-        └── bodycam_mod.dll      ← появляется после сборки Mod/
+        └── bodycam_mod.dll      
 ```
 
 ---
